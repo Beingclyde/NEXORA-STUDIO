@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Nexora Studio — Premium Websites for Businesses in Zimbabwe</title>
 <meta name="description" content="Professional, mobile-first websites with WhatsApp enquiries, EcoCash payments, free sample homepage and monthly care plans. Based in Zimbabwe.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://formspree.io https://*.workers.dev https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://challenges.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://formspree.io https://*.workers.dev https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; frame-src https://challenges.cloudflare.com; base-uri 'self'; form-action 'self' https://formspree.io">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#0F1B2D">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2040%2040%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%23F2C46B%22/%3E%3Cstop%20offset=%22.55%22%20stop-color=%22%23E8A33D%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%233FA796%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20x=%221%22%20y=%221%22%20width=%2238%22%20height=%2238%22%20rx=%2210%22%20fill=%22%230F1B2D%22%20stroke=%22url%28%23g%29%22%20stroke-width=%222%22/%3E%3Cpath%20d=%22M12.5%2029.5V12l15%2017.5V12.5%22%20fill=%22none%22%20stroke=%22url%28%23g%29%22%20stroke-width=%223.8%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ccircle%20cx=%2227.5%22%20cy=%2212.5%22%20r=%222.7%22%20fill=%22url%28%23g%29%22/%3E%3C/svg%3E">
@@ -126,7 +126,7 @@ html{scroll-padding-top:96px}section,.hero{scroll-margin-top:96px}.row .btn{flex
 <div class="c"><h3>Printable invoices</h3><p>Every job comes with a professional invoice you can print or save as PDF.</p></div></div></div></section>
 
 <section id="community"><div class="w"><div class="eye">Community</div><h2>Ask, share and learn</h2><p>Questions about getting your business online? Post below and others can reply.</p>
-<div class="c"><div class="fg"><div><label for="pn1">Your name</label><input id="pn1" maxlength="40"></div><div></div></div><label for="pt">Your post</label><textarea id="pt" maxlength="500"></textarea><button class="btn" id="pp" style="margin-top:12px">Post</button></div>
+<div class="c"><div class="fg"><div><label for="pn1">Your name</label><input id="pn1" maxlength="40"></div><div></div></div><label for="pt">Your post</label><textarea id="pt" maxlength="500"></textarea><div id="tsp" style="margin-top:12px"></div><button class="btn" id="pp" style="margin-top:12px">Post</button><p id="pm" class="ok" style="margin:10px 0 0"></p></div>
 <div id="posts"></div></div></section>
 
 <section id="contact" style="background:var(--s1)"><div class="w"><div class="eye">Get in touch</div><h2>Request a quote</h2>
@@ -134,7 +134,7 @@ html{scroll-padding-top:96px}section,.hero{scroll-margin-top:96px}.row .btn{flex
 <div><label>Your name</label><input name="name" maxlength="80" required></div><div><label>Business name</label><input name="biz" maxlength="80"></div>
 <div><label>WhatsApp / phone</label><input name="phone" maxlength="30" required></div><div><label>Email</label><input name="email" maxlength="120" type="email"></div></div>
 <label>Package</label><select name="pkg" id="pkgS"><option>Not sure yet</option><option>Starter (one-time)</option><option>Business (one-time)</option><option>Care plan (monthly subscription)</option><option>Growth plan (monthly subscription)</option></select>
-<label>Tell me about your business</label><textarea name="notes" maxlength="1000"></textarea><button class="btn" style="margin-top:14px">Send quote request</button><p id="qm" class="ok" style="margin:12px 0 0"></p>
+<label>Tell me about your business</label><textarea name="notes" maxlength="1000"></textarea><div id="qfw" style="display:none"><label for="qfiles">Attach your logo or photos (optional, up to 3 files, 3 MB each)</label><input type="file" id="qfiles" accept="image/png,image/jpeg,image/webp,application/pdf" multiple></div><div id="tsq" style="margin-top:12px"></div><button class="btn" style="margin-top:14px">Send quote request</button><p id="qm" class="ok" style="margin:12px 0 0"></p>
 <p style="font-size:.8rem;margin:10px 0 0">Your details are only used to reply to your request.</p></form>
 <p style="margin-top:18px">WhatsApp / Call: <a href="tel:+263790240678">0790 240 678</a> · Email: <a href="mailto:clydechitepo70@gmail.com">clydechitepo70@gmail.com</a></p></div></section>
 
@@ -154,29 +154,48 @@ html{scroll-padding-top:96px}section,.hero{scroll-margin-top:96px}.row .btn{flex
 
 <script>
 /* ===== CONFIG: edit these defaults (or use Dashboard > Settings > Copy config) ===== */
-const CONFIG={prices:{starter:'',business:'',care:'',growth:''},accent:'#E8A33D',theme:'dark',eco:'0790240678',email:'clydechitepo70@gmail.com',fs:'',paynow:'',chat:''};
+const CONFIG={prices:{starter:'',business:'',care:'',growth:''},accent:'#E8A33D',theme:'dark',eco:'0790240678',email:'clydechitepo70@gmail.com',fs:'',paynow:'',api:'',beacon:''};
 const $=(s,e=document)=>e.querySelector(s),$$=(s,e=document)=>[...e.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const get=(k,d)=>{try{const v=localStorage.getItem('vws_'+k);return v?JSON.parse(v):d}catch(e){return d}};
 const set=(k,v)=>{try{localStorage.setItem('vws_'+k,JSON.stringify(v))}catch(e){}};
-const S=Object.freeze({...CONFIG,prices:Object.freeze({...CONFIG.prices})});
+const S={...CONFIG,prices:{...CONFIG.prices},sitekey:'',ai:false,files:false};
 const fmt=t=>new Date(t).toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});
 function theme(){const r=document.documentElement;r.style.setProperty('--gold',S.accent);S.theme==='auto'?r.removeAttribute('data-theme'):r.dataset.theme=S.theme}
-function paint(){theme();$$('[data-pr]').forEach(e=>{const v=S.prices[e.dataset.pr];e.textContent=v?'$'+v:'Get a quote'});
+function paint(){theme();$('#qfw').style.display=S.api&&S.files?'block':'none';$$('[data-pr]').forEach(e=>{const v=S.prices[e.dataset.pr];e.textContent=v?'$'+v:'Get a quote'});
 $('#ecoN').textContent=S.eco.replace(/(\d{4})(\d{3})(\d{3})/,'$1 $2 $3');if(S.paynow){$('#pn').href=S.paynow;$('#pn').style.display='inline-block';$('#cardTxt').textContent='Pay securely by card or EcoCash through Paynow.'}}
-const log=()=>{};try{if(top!==self)top.location=self.location}catch(e){}
+const ref=(()=>{try{return document.referrer?new URL(document.referrer).hostname:''}catch(e){return''}})();
+const log=t=>{if(S.api)try{navigator.sendBeacon(S.api+'/api/event',JSON.stringify({t:String(t).slice(0,40),p:location.pathname,r:ref}))}catch(e){}};try{if(top!==self)top.location=self.location}catch(e){}
 /* send enquiry: Formspree if configured, else opens your email app */
 async function send(subject,data){if(S.fs){try{const r=await fetch('https://formspree.io/f/'+S.fs,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({subject,...data})});if(r.ok)return true}catch(e){}}
 location.href='mailto:'+S.email+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(Object.entries(data).map(([k,v])=>k+': '+v).join('\n'));return false}
 $$('[data-pkg]').forEach(b=>b.onclick=()=>{$('#pkgS').value=b.dataset.pkg;log('click:pkg');$('#contact').scrollIntoView()});
 $('#cp').onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(S.eco);$('#cp').textContent='Copied ✓'};
-$('#qf').onsubmit=async e=>{e.preventDefault();const f=Object.fromEntries([...new FormData(e.target)].map(([k,v])=>[k,String(v).slice(0,1000)]));if(f.website)return;delete f.website;const bt=e.target.querySelector('button');bt.disabled=true;setTimeout(()=>bt.disabled=false,15000);
-const sent=await send('New quote request — '+f.name,f);$('#qm').textContent=sent?'Thanks! I’ll reply on WhatsApp or phone shortly.':'Your email app should open — press send. You can also WhatsApp 0790 240 678.';e.target.reset()};
+$('#qf').onsubmit=async e=>{e.preventDefault();const form=e.target,qm=$('#qm');if(form.website.value)return;const bt=form.querySelector('button.btn');
+if(S.api){const fd=new FormData(form),files=[...($('#qfiles').files||[])];fd.delete('files');
+if(files.length>3||files.some(x=>x.size>3*1024*1024)){qm.textContent='Please attach up to 3 files of 3 MB or less.';return}
+if(S.files)files.forEach(x=>fd.append('files',x));if(tok.q)fd.set('ts',tok.q);bt.disabled=true;qm.textContent='Sending…';
+try{const r=await fetch(S.api+'/api/quote',{method:'POST',body:fd});const j=await r.json().catch(()=>({}));
+if(r.ok){log('quote');qm.textContent='Thanks! I’ll reply on WhatsApp or phone shortly.';form.reset();tsReset('q');setTimeout(()=>bt.disabled=false,15000);return}
+if(r.status<500){qm.textContent=j.error||'Please check your details and try again.';bt.disabled=false;tsReset('q');return}}catch(x){}
+bt.disabled=false}
+const f=Object.fromEntries([...new FormData(form)].filter(([k,v])=>typeof v==='string').map(([k,v])=>[k,v.slice(0,1000)]));delete f.website;bt.disabled=true;setTimeout(()=>bt.disabled=false,15000);
+const sent=await send('New quote request — '+f.name,f);qm.textContent=sent?'Thanks! I’ll reply on WhatsApp or phone shortly.':'Your email app should open — press send. You can also WhatsApp 0790 240 678.';form.reset()};
 /* community */
-function posts(){const a=get('posts',[]);$('#posts').innerHTML=a.length?a.map(p=>`<div class="post"><b>${esc(p.n)}</b> <small>${fmt(p.t)}</small><p style="color:var(--tx);margin:.3em 0">${esc(p.x)}</p><button class="btn o sm" data-l="${p.id}">♥ ${p.l||0}</button> <button class="btn o sm" data-r="${p.id}">Reply</button>${(p.r||[]).map(r=>`<div class="rep"><b>${esc(r.n)}</b>: ${esc(r.x)}</div>`).join('')}</div>`).join(''):'<p style="margin-top:18px">No posts yet — be the first to start the conversation.</p>'}
-let lastP=0;$('#pp').onclick=()=>{if(Date.now()-lastP<20000)return;const n=$('#pn1').value.trim().slice(0,40)||'Guest',x=$('#pt').value.trim().slice(0,500);if(!x)return;lastP=Date.now();const a=get('posts',[]);a.unshift({id:Date.now(),t:Date.now(),n,x,l:0,r:[]});set('posts',a.slice(0,50));$('#pt').value='';log('post');posts()};
-$('#posts').onclick=e=>{const a=get('posts',[]);const l=e.target.dataset.l,r=e.target.dataset.r;
-if(l){const p=a.find(p=>p.id==l);p.l=(p.l||0)+1}else if(r){const x=(prompt('Your reply')||'').slice(0,300);if(!x)return;const n=(prompt('Your name')||'Guest').slice(0,40);a.find(p=>p.id==r).r.push({n,x})}else return;set('posts',a);posts()};
+const tok={};let tsId={};
+function tsReset(k){try{if(tsId[k]!=null)turnstile.reset(tsId[k])}catch(e){}tok[k]=''}
+function tsInit(){if(!S.sitekey||tsId.q!=null||!window.turnstile)return;[['q','#tsq'],['p','#tsp']].forEach(([k,sel])=>{tsId[k]=turnstile.render(sel,{sitekey:S.sitekey,theme:'auto',callback:t=>tok[k]=t,'expired-callback':()=>tok[k]='','error-callback':()=>tok[k]=''})})}
+function tsLoad(){if(!S.sitekey||window.turnstile||document.getElementById('tsjs'))return tsInit();const sc=document.createElement('script');sc.id='tsjs';sc.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';sc.async=true;sc.onload=tsInit;document.head.appendChild(sc)}
+const api=(p,o)=>fetch(S.api+p,o).then(async r=>{const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||'Something went wrong');return j});
+const pj=body=>({method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+const card=p=>`<div class="post"><b>${esc(p.name||p.n)}</b> <small>${fmt(p.created||p.t)}</small><p style="color:var(--tx);margin:.3em 0">${esc(p.text||p.x)}</p><button class="btn o sm" data-l="${p.id}">♥ ${p.likes||p.l||0}</button> <button class="btn o sm" data-r="${p.id}">Reply</button>${(p.replies||p.r||[]).map(r=>`<div class="rep"><b>${esc(r.name||r.n)}</b>: ${esc(r.text||r.x)}</div>`).join('')}</div>`;
+async function posts(){let a;if(S.api){try{a=await api('/api/posts')}catch(e){a=[]}}else a=get('posts',[]);$('#posts').innerHTML=a.length?a.map(card).join(''):'<p style="margin-top:18px">No posts yet — be the first to start the conversation.</p>'}
+let lastP=0;$('#pp').onclick=async()=>{if(Date.now()-lastP<20000)return;const n=$('#pn1').value.trim().slice(0,40)||'Guest',x=$('#pt').value.trim().slice(0,500);if(!x)return;lastP=Date.now();
+if(S.api){try{await api('/api/posts',pj({name:n,text:x,ts:tok.p}));$('#pt').value='';$('#pm').textContent='Posted!';log('post');tsReset('p')}catch(e){$('#pm').textContent=e.message;tsReset('p')}return posts()}
+const a=get('posts',[]);a.unshift({id:Date.now(),t:Date.now(),n,x,l:0,r:[]});set('posts',a.slice(0,50));$('#pt').value='';log('post');posts()};
+$('#posts').onclick=async e=>{const l=e.target.dataset.l,r=e.target.dataset.r;if(!l&&!r)return;
+if(S.api){try{if(l)await api('/api/posts/'+l+'/like',{method:'POST'});else{const x=(prompt('Your reply')||'').slice(0,300);if(!x)return;const n=(prompt('Your name')||'Guest').slice(0,40);if(tok.p)await api('/api/posts/'+r+'/reply',pj({name:n,text:x,ts:tok.p}));else await api('/api/posts/'+r+'/reply',pj({name:n,text:x}));tsReset('p')}}catch(er){alert(er.message)}return posts()}
+const a=get('posts',[]);if(l){const p=a.find(p=>p.id==l);p.l=(p.l||0)+1}else{const x=(prompt('Your reply')||'').slice(0,300);if(!x)return;const n=(prompt('Your name')||'Guest').slice(0,40);a.find(p=>p.id==r).r.push({n,x})}set('posts',a);posts()};
 /* ===== sample designs ===== */
 const DM=[
 {n:"Plumbing",biz:"Clearwater Plumbing",tag:"Burst pipe? We’re on our way.",sub:"Licensed local plumbers. Call-outs within the hour, upfront quotes, no surprise fees.",bg:"#f3f8fb",ink:"#0b2a3d",acc:"#0a7ea4",ab:"#fff",h:"'Archivo Black',sans-serif",b:"'DM Sans',sans-serif",r:"6px",cta:"Call now",sv:[["Emergency repairs","Leaks, blockages and burst pipes, day or night."],["Geyser and boiler","Installation, servicing and replacement."],["Bathrooms","Full fit-outs and renovations."]],q:"They fixed our leak in 40 minutes and left the place spotless.",by:"Sample review",f:"Describe the problem",o:["Leak","Blocked drain","Geyser","Other"],g:"C"},
@@ -209,12 +228,12 @@ try{new IntersectionObserver(es=>dvis=es[0].isIntersecting,{threshold:.2}).obser
 setInterval(()=>{if(auto&&dvis)dshow((di+1)%DM.length)},7000);dshow(0);
 /* ===== chatbot ===== */
 (()=>{const box=$('#cb'),lg=$('#cbm'),inp=$('#cbi'),qq=$('#cbq'),WA='https://wa.me/263790240678?text=';let hist=[],flow=null,lead={},busy=false,last=0,greeted=false;
-const ai=!!S.chat;$('#cbt').textContent=ai?'AI assistant':'Automated assistant';
+const isAI=()=>!!(S.api&&S.ai);const badge=()=>$('#cbt').textContent=isAI()?'AI assistant':'Automated assistant';badge();
 const P=k=>S.prices[k]?'$'+S.prices[k]:null;
 const price=()=>{const x=[['starter','Starter'],['business','Business'],['care','Care plan per month'],['growth','Growth plan per month']].filter(a=>P(a[0]));return x.length?'Current prices: '+x.map(a=>a[1]+' '+P(a[0])).join(', ')+'. The final price depends on your project.':'Prices depend on how many pages and features you need. Share a few details and I will arrange a free, no-obligation quote.'};
 const KB=[
 [/\b(hi|hello|hey|howzit)\b|good (morning|afternoon|evening)/,()=>['Hello! How can I help with your website today?']],
-[/price|cost|how much|charge|\bfees?\b|afford|cheap|budget/,()=>[price()]],
+[/pric|cost|how much|charge|\bfees?\b|afford|cheap|budget/,()=>[price()]],
 [/sample|demo|preview|try before|\bfree\b/,()=>['Yes. Before you pay anything, I build a free sample homepage with your business name and content. If it is not right, you owe nothing.']],
 [/ecocash|\bpay|\bcards?\b|visa|master|invoice|paynow|deposit|receipt/,()=>['You can pay by EcoCash to '+S.eco+', using your invoice number as the reference, then send proof on WhatsApp. Every job comes with a printable invoice.'+(S.paynow?' Card payments are also available through Paynow.':' Card payments are coming soon.')]],
 [/\b(long|days|weeks|time)\b|how fast|deliver|turnaround|\bready\b/,()=>['Most sites go live within days. The main factor is how quickly you send photos, prices and details.']],
@@ -229,20 +248,22 @@ function chips(l){qq.innerHTML='';l.forEach(x=>{const b=document.createElement('
 const steps=[['name','What is your name?'],['phone','What is your WhatsApp number?'],['need','Briefly, tell me about your business and what you need.']];
 function startLead(){flow=0;lead={};say('Great, I will take a few details. '+steps[0][1],'b')}
 async function leadStep(v){lead[steps[flow][0]]=v;flow++;if(flow<steps.length){say(steps[flow][1],'b');return}flow=null;say('Thank you, '+lead.name+'. Sending your request…','b');const ok=await send('Chatbot quote request — '+lead.name,{name:lead.name,phone:lead.phone,notes:lead.need,source:'chatbot'});say(ok?'Done. I will reply on WhatsApp shortly.':'Your email app should open. Press send to finish, or message me on WhatsApp.','b',[['Message on WhatsApp',WA+encodeURIComponent('Hi Nexora Studio, I am '+lead.name+'. '+lead.need)]]);chips(['Pricing','Free sample','Payments'])}
-async function aiReply(){const c=new AbortController(),to=setTimeout(()=>c.abort(),15000);try{const r=await fetch(S.chat,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:hist.slice(-10)}),signal:c.signal});if(!r.ok)throw 0;const j=await r.json();return String(j.reply||'').slice(0,1200)||null}finally{clearTimeout(to)}}
+async function aiReply(){const c=new AbortController(),to=setTimeout(()=>c.abort(),15000);try{const r=await fetch(S.api+'/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:hist.slice(-10)}),signal:c.signal});if(!r.ok)throw 0;const j=await r.json();return String(j.reply||'').slice(0,1200)||null}finally{clearTimeout(to)}}
 async function ask(t){t=String(t).trim().slice(0,300);if(!t||busy||Date.now()-last<1000)return;last=Date.now();say(t,'u');inp.value='';qq.innerHTML='';
 if(flow!==null){if(flow===1&&!/\d{7,}/.test(t)){say('Please enter a valid phone number, for example 0790 240 678.','b');return}return leadStep(t)}
 if(/\b(quote|get started|start a project|hire you|order a website)\b/i.test(t)){startLead();return}
 busy=true;const d=document.createElement('div');d.className='cm b cdt';d.innerHTML='<i></i><i></i><i></i>';lg.appendChild(d);lg.scrollTop=lg.scrollHeight;
 let a=null,l=[];hist.push({role:'user',content:t});
-try{if(ai)a=await aiReply()}catch(e){a=null}
+try{if(isAI())a=await aiReply()}catch(e){a=null}
 if(!a){await new Promise(r=>setTimeout(r,450));[a,l]=rule(t)}
 d.remove();say(a,'b',l);hist.push({role:'assistant',content:a});busy=false;chips(['Get a quote','Pricing','Talk to a person'])}
-function open(){box.classList.add('open');$('#cbo').setAttribute('aria-expanded','true');if(!greeted){greeted=true;say(ai?'Hi, I am the Nexora Studio AI assistant. I can make mistakes, so for quotes I will hand you to a person. How can I help?':'Hi, I am the Nexora Studio automated assistant. Ask me about pricing, the free sample, payments or timing.','b');chips(['Get a quote','Pricing','Free sample','Payments'])}setTimeout(()=>inp.focus(),50)}
+function open(){box.classList.add('open');$('#cbo').setAttribute('aria-expanded','true');if(!greeted){greeted=true;badge();say(isAI()?'Hi, I am the Nexora Studio AI assistant. I can make mistakes, so for quotes I will hand you to a person. How can I help?':'Hi, I am the Nexora Studio automated assistant. Ask me about pricing, the free sample, payments or timing.','b');chips(['Get a quote','Pricing','Free sample','Payments'])}setTimeout(()=>inp.focus(),50)}
 function close(){box.classList.remove('open');$('#cbo').setAttribute('aria-expanded','false');$('#cbo').focus()}
 $('#cbo').onclick=open;$('#cbx').onclick=close;$('#cbf').onsubmit=e=>{e.preventDefault();ask(inp.value)};
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('open'))close()})})();
-paint();posts();$('#yr').textContent=new Date().getFullYear();
+(async()=>{if(S.api){try{const c=await api('/api/config');if(c.prices)S.prices={...S.prices,...c.prices};['theme','accent','eco','email','paynow'].forEach(k=>{if(c[k])S[k]=c[k]});S.sitekey=c.sitekey||'';S.ai=!!c.ai;S.files=!!c.files}catch(e){}}
+paint();posts();tsLoad();log('view');if(S.beacon){const b=document.createElement('script');b.defer=true;b.src='https://static.cloudflareinsights.com/beacon.min.js';b.dataset.cfBeacon=JSON.stringify({token:S.beacon});document.head.appendChild(b)}})();
+paint();$('#yr').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
